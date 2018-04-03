@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Quotations";
+}
+<div class="container">
+    <h2>Notowania</h2>
+
+    <div class="row">
+        <div class="col-md-2 ">
+            <p>Wybierz walutę:</p>
+            <select id="currenciesList">  </select>
+        </div>
+        <div class='col-md-2 col-md-offset-5'>
+            <label for="startDate">Data początkowa:</label>
+            <div class="form-group">
+                <div class='input-group date' id='startDatePicker'>
+                    <input type='text' class="form-control" id="startDate" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <label for="endDate">Data końcowa:</label>
+            <div class="form-group">
+                <div class='input-group date' id='endDatePicker'>
+                    <input type='text' class="form-control" id="endDate" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-success btn-draw">Rysuj wykres</button>
+        </div>
+
+    </div>
+    <div class="col-md-2">
+        <div class="checkbox">
+            <label><input type="checkbox" class="one-checked-checkbox" checked="checked" value="mid">Kurs średni</label>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="checkbox">
+            <label><input type="checkbox" class="one-checked-checkbox" value="bid">Kurs kupna</label>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="checkbox">
+            <label><input type="checkbox" class="one-checked-checkbox" value="ask">Kurs sprzedaży</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 chart">
+            <canvas id="chart" width="1200" height="500"></canvas>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/Scripts/quotations-currency.js"></script>
+}

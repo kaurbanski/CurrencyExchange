@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Kantory w twojej okolicy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="map-container">
+    <div class="row">
+        <div id="map"></div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/currency-exchange-on-map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLlOE7FZHcB-IPNnd8x3NnL5oSD4JqWlQ&libraries=places&callback=initMap" async defer></script>
+}
+

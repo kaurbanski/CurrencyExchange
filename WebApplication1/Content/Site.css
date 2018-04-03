@@ -1,0 +1,106 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+}
+
+.mark {
+    background: red;
+}
+
+
+
+/* LOADER*/
+
+.loader {
+    border: 7px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 7px solid #3498db;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*SORT*/
+
+table.tablesorter thead tr .header {
+    background-image: url(Images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+
+table.tablesorter tbody tr.odd td {
+    background-color: #ccc;
+}
+
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(Images/asc.gif);
+}
+
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(Images/desc.gif);
+}
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+}
+
+
+/* Quotations currency*/
+.btn-draw {
+    margin-top: 23px;
+}
+
+/* Quotations */
+
+.chart {
+    margin-top: 70px;
+}
+
+/* MAP */
+
+#map{
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left:0;
+    right:0;
+}

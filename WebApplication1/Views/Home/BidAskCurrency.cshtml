@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Kursy kupna i sprzedaży walut";
+}
+
+<div class="container">
+    <h1>@ViewBag.Title:</h1>
+    <div class="row">
+        <div class='col-md-2'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" id="currencyMidInput" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="loader-place"></div>
+        </div>
+        <div class="col-md-offset-7 col-md-2">
+            <input type="text" class="form-control" placeholder="Search..." id="searchInput" />
+        </div>
+        <table class="table table-bordered tablesorter" id="BidAskTable">
+            <thead>
+                <tr>
+                    <th>Kod waluty</th>
+                    <th>Nazwa waluty</th>
+                    <th>Kurs kupna</th>
+                    <th>Kurs sprzedaży</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/get-bid-ask-currency.js"></script>
+}

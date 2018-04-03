@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Złoto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Złoto</h2>
+    <div class="loader-place"></div>
+
+    <h4></h4>
+
+    <div class="row">
+        <div class='col-md-2 col-md-offset-7'>
+            <label for="startDate">Data początkowa:</label>
+            <div class="form-group">
+                <div class='input-group date' id='startDatePicker'>
+                    <input type='text' class="form-control" id="startDate" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <label for="endDate">Data końcowa:</label>
+            <div class="form-group">
+                <div class='input-group date' id='endDatePicker'>
+                    <input type='text' class="form-control" id="endDate" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-success btn-draw">Rysuj wykres</button>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12 chart">
+            <canvas id="chart" width="1200" height="500"></canvas>
+        </div>
+    </div>
+</div> <!-- /container--> 
+@section Scripts{
+    <script src="~/Scripts/gold-quotations.js"></script>
+}
